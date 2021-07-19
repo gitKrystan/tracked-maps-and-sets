@@ -1,4 +1,5 @@
 import { tracked } from '@glimmer/tracking';
+import Ember from 'ember';
 
 class Tag {
   @tracked private __tag_value__: undefined;
@@ -32,8 +33,6 @@ export let consumeCollection = (obj: object): void => {
 export let dirtyCollection = (obj: object): void => {
   dirtyKey(obj, COLLECTION_SYMBOL);
 };
-
-declare const Ember: any;
 
 if (typeof Ember !== 'undefined') {
   // eslint-disable-next-line ember/new-module-imports
